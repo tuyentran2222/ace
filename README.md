@@ -1,3 +1,4 @@
+```
 <?php
     class Api{
         public const COMPILE_ENDPOINT = 'https://api.hackerearth.com/v4/partner/code-evaluation/submissions/';
@@ -115,3 +116,4 @@
         echo "0 results";
     }
 ?>
+```
