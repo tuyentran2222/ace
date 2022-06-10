@@ -117,3 +117,164 @@
     }
 ?>
 ```
+
+```
+<?php
+    class Judgo0API {
+        public static function createBatchSubmissions($start){
+            $curl = curl_init();
+            $data = [
+                "submissions" => [
+                    [
+                        "source_code" => "I2luY2x1ZGUgPHN0ZGlvLmg+DQppbnQgbWFpbigpIHsgICAgDQogDQogICAgaW50IG51bTEsIG51bTIsIHN1bTsNCiAgICBzY2FuZigiJWQgJWQiLCAmbnVtMSwgJm51bTIpOw0KIA0KICAgIC8vIHRpbmggdG9uZyAyIHNvDQogICAgc3VtID0gbnVtMSArIG51bTI7ICAgICAgDQogICAgIA0KICAgIHByaW50ZigiJWQiLCBzdW0pOw0KICAgIHJldHVybiAwOw0KfQ==",
+                        "language_id" => 75,
+                        "stdin" =>"MjUgMzA=",
+                        "expected_output" => "NTU="
+                    ],
+                    [
+                        "source_code" => "I2luY2x1ZGUgPHN0ZGlvLmg+DQppbnQgbWFpbigpIHsgICAgDQogDQogICAgaW50IG51bTEsIG51bTIsIHN1bTsNCiAgICBzY2FuZigiJWQgJWQiLCAmbnVtMSwgJm51bTIpOw0KIA0KICAgIC8vIHRpbmggdG9uZyAyIHNvDQogICAgc3VtID0gbnVtMSArIG51bTI7ICAgICAgDQogICAgIA0KICAgIHByaW50ZigiJWQiLCBzdW0pOw0KICAgIHJldHVybiAwOw0KfQ==",
+                        "language_id" => 75,
+                        "stdin" =>"MjUgMzA=",
+                        "expected_output" => "NTU="
+                    ],
+                    [
+                        "source_code" => "I2luY2x1ZGUgPHN0ZGlvLmg+DQppbnQgbWFpbigpIHsgICAgDQogDQogICAgaW50IG51bTEsIG51bTIsIHN1bTsNCiAgICBzY2FuZigiJWQgJWQiLCAmbnVtMSwgJm51bTIpOw0KIA0KICAgIC8vIHRpbmggdG9uZyAyIHNvDQogICAgc3VtID0gbnVtMSArIG51bTI7ICAgICAgDQogICAgIA0KICAgIHByaW50ZigiJWQiLCBzdW0pOw0KICAgIHJldHVybiAwOw0KfQ==",
+                        "language_id" => 75,
+                        "stdin" =>"MTIzNDU2NzggODc2NTQzMjE=",
+                        "expected_output" => "OTk5OTk5OTk="
+                    ],
+                    [
+                        "source_code" => "I2luY2x1ZGUgPHN0ZGlvLmg+DQppbnQgbWFpbigpIHsgICAgDQogDQogICAgaW50IG51bTEsIG51bTIsIHN1bTsNCiAgICBzY2FuZigiJWQgJWQiLCAmbnVtMSwgJm51bTIpOw0KIA0KICAgIC8vIHRpbmggdG9uZyAyIHNvDQogICAgc3VtID0gbnVtMSArIG51bTI7ICAgICAgDQogICAgIA0KICAgIHByaW50ZigiJWQiLCBzdW0pOw0KICAgIHJldHVybiAwOw0KfQ==",
+                        "language_id" => 75,
+                        "stdin" =>"MTIzNDU2NyA4NzY1NDMy",
+                        "expected_output" => "OTk5OTk5OQ=="
+                    ],
+                    [
+                        "source_code" => "I2luY2x1ZGUgPHN0ZGlvLmg+DQppbnQgbWFpbigpIHsgICAgDQogDQogICAgaW50IG51bTEsIG51bTIsIHN1bTsNCiAgICBzY2FuZigiJWQgJWQiLCAmbnVtMSwgJm51bTIpOw0KIA0KICAgIC8vIHRpbmggdG9uZyAyIHNvDQogICAgc3VtID0gbnVtMSArIG51bTI7ICAgICAgDQogICAgIA0KICAgIHByaW50ZigiJWQiLCBzdW0pOw0KICAgIHJldHVybiAwOw0KfQ==",
+                        "language_id" => 75,
+                        "stdin" =>"MTQ3IDc0MQ==",
+                        "expected_output" => "ODg4OA=="
+                    ],
+                    [
+                        "source_code" => "I2luY2x1ZGUgPHN0ZGlvLmg+DQppbnQgbWFpbigpIHsgICAgDQogDQogICAgaW50IG51bTEsIG51bTIsIHN1bTsNCiAgICBzY2FuZigiJWQgJWQiLCAmbnVtMSwgJm51bTIpOw0KIA0KICAgIC8vIHRpbmggdG9uZyAyIHNvDQogICAgc3VtID0gbnVtMSArIG51bTI7ICAgICAgDQogICAgIA0KICAgIHByaW50ZigiJWQiLCBzdW0pOw0KICAgIHJldHVybiAwOw0KfQ==",
+                        "language_id" => 75,
+                        "stdin" =>"MTQ3IDc0MQ==",
+                        "expected_output" => "ODg4OA=="
+                    ],
+                    [
+                        "source_code" => "I2luY2x1ZGUgPHN0ZGlvLmg+DQppbnQgbWFpbigpIHsgICAgDQogDQogICAgaW50IG51bTEsIG51bTIsIHN1bTsNCiAgICBzY2FuZigiJWQgJWQiLCAmbnVtMSwgJm51bTIpOw0KIA0KICAgIC8vIHRpbmggdG9uZyAyIHNvDQogICAgc3VtID0gbnVtMSArIG51bTI7ICAgICAgDQogICAgIA0KICAgIHByaW50ZigiJWQiLCBzdW0pOw0KICAgIHJldHVybiAwOw0KfQ==",
+                        "language_id" => 75,
+                        "stdin" =>"MTQ3IDc0MQ==",
+                        "expected_output" => "ODg4OA=="
+                    ],
+                    [
+                        "source_code" => "I2luY2x1ZGUgPHN0ZGlvLmg+DQppbnQgbWFpbigpIHsgICAgDQogDQogICAgaW50IG51bTEsIG51bTIsIHN1bTsNCiAgICBzY2FuZigiJWQgJWQiLCAmbnVtMSwgJm51bTIpOw0KIA0KICAgIC8vIHRpbmggdG9uZyAyIHNvDQogICAgc3VtID0gbnVtMSArIG51bTI7ICAgICAgDQogICAgIA0KICAgIHByaW50ZigiJWQiLCBzdW0pOw0KICAgIHJldHVybiAwOw0KfQ==",
+                        "language_id" => 75,
+                        "stdin" =>"MTQ3IDc0MQ==",
+                        "expected_output" => "ODg4OA=="
+                    ],
+                    [
+                        "source_code" => "I2luY2x1ZGUgPHN0ZGlvLmg+DQppbnQgbWFpbigpIHsgICAgDQogDQogICAgaW50IG51bTEsIG51bTIsIHN1bTsNCiAgICBzY2FuZigiJWQgJWQiLCAmbnVtMSwgJm51bTIpOw0KIA0KICAgIC8vIHRpbmggdG9uZyAyIHNvDQogICAgc3VtID0gbnVtMSArIG51bTI7ICAgICAgDQogICAgIA0KICAgIHByaW50ZigiJWQiLCBzdW0pOw0KICAgIHJldHVybiAwOw0KfQ==",
+                        "language_id" => 75,
+                        "stdin" =>"MTQ3IDc0MQ==",
+                        "expected_output" => "ODg4OA=="
+                    ],
+                    [
+                        "source_code" => "I2luY2x1ZGUgPHN0ZGlvLmg+DQppbnQgbWFpbigpIHsgICAgDQogDQogICAgaW50IG51bTEsIG51bTIsIHN1bTsNCiAgICBzY2FuZigiJWQgJWQiLCAmbnVtMSwgJm51bTIpOw0KIA0KICAgIC8vIHRpbmggdG9uZyAyIHNvDQogICAgc3VtID0gbnVtMSArIG51bTI7ICAgICAgDQogICAgIA0KICAgIHByaW50ZigiJWQiLCBzdW0pOw0KICAgIHJldHVybiAwOw0KfQ==",
+                        "language_id" => 75,
+                        "stdin" =>"MTQ3IDc0MQ==",
+                        "expected_output" => "ODg4OA=="
+                    ],
+                    [
+                        "source_code" => "I2luY2x1ZGUgPHN0ZGlvLmg+DQppbnQgbWFpbigpIHsgICAgDQogDQogICAgaW50IG51bTEsIG51bTIsIHN1bTsNCiAgICBzY2FuZigiJWQgJWQiLCAmbnVtMSwgJm51bTIpOw0KIA0KICAgIC8vIHRpbmggdG9uZyAyIHNvDQogICAgc3VtID0gbnVtMSArIG51bTI7ICAgICAgDQogICAgIA0KICAgIHByaW50ZigiJWQiLCBzdW0pOw0KICAgIHJldHVybiAwOw0KfQ==",
+                        "language_id" => 75,
+                        "stdin" =>"MTQ3IDc0MQ==",
+                        "expected_output" => "ODg4OA=="
+                    ]
+                ]
+            ];
+            curl_setopt_array($curl, [
+                CURLOPT_URL => "https://judge0-ce.p.rapidapi.com/submissions/batch?base64_encoded=true",
+                CURLOPT_RETURNTRANSFER => true,
+                CURLOPT_FOLLOWLOCATION => true,
+                CURLOPT_ENCODING => "",
+                CURLOPT_MAXREDIRS => 10,
+                CURLOPT_TIMEOUT => 30,
+                CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+                CURLOPT_CUSTOMREQUEST => "POST",
+                CURLOPT_POSTFIELDS => json_encode($data),
+                CURLOPT_HTTPHEADER => [
+                    "Content-Type: application/json",
+                    "X-RapidAPI-Host: judge0-ce.p.rapidapi.com",
+                    "X-RapidAPI-Key: 098e3d9739msh4b746e012d2caa5p1246bajsn7e357dcbc876",
+                    "content-type: application/json"
+                ],
+            ]);
+
+            $response = curl_exec($curl);
+            $err = curl_error($curl);
+
+            curl_close($curl);
+
+            if ($err) {
+                echo "cURL Error #:" . $err;
+            } else {
+                $results = json_decode($response);
+                $str = "";
+                foreach ($results as $key => $result) {
+                    $str .= $result->token .",";
+                }
+                $str = trim($str, ',');
+                echo $str;
+                $param = ["tokens" => $str];
+                return static::getBatchSubmissions($param, $start);
+            }
+        }
+
+        public static function getBatchSubmissions($param, $start){
+            $dung = false;
+            $res = "";
+            $curl = curl_init();
+
+            curl_setopt_array($curl, [
+                CURLOPT_URL => "https://judge0-ce.p.rapidapi.com/submissions/batch?".http_build_query($param)."&base64_encoded=true&fields=status,language,time,expected_output",
+                CURLOPT_RETURNTRANSFER => true,
+                CURLOPT_FOLLOWLOCATION => true,
+                CURLOPT_ENCODING => "",
+                CURLOPT_MAXREDIRS => 10,
+                CURLOPT_TIMEOUT => 30,
+                CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+                CURLOPT_CUSTOMREQUEST => "GET",
+                CURLOPT_HTTPHEADER => [
+                    "X-RapidAPI-Host: judge0-ce.p.rapidapi.com",
+                    "X-RapidAPI-Key: 098e3d9739msh4b746e012d2caa5p1246bajsn7e357dcbc876"
+                ],
+            ]);
+
+            do{
+    
+                $response = curl_exec($curl);
+                $res = json_decode($response)->submissions;
+                $arr_count = array_reduce($res, function($su, $item){
+                    if ($item->status->id >= 3)  return ++$su;
+                    return $su;
+                }, 0);
+
+                if (count($res) == $arr_count){
+                    $dung = true;
+                }
+                if (!$dung) sleep(1);
+            }
+            while (!$dung);
+            curl_close($curl);
+            echo "end1: ". (microtime(true) - $start);
+            return $res;
+        }
+    }
+    $start =microtime(true);
+    $res =Judgo0API::createBatchSubmissions($start);
+    echo "end2: ". (microtime(true) - $start);
+    echo "<pre>";
+    echo var_dump($res);
+    echo "</pre>";
+```
